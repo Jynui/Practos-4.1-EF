@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5adf822cb4e14f5d9bf3595d7266c113" Name="Diagram1">
+        <EntityTypeShape EntityType="yandex_storeModel.Order_Products" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="yandex_storeModel.Orders" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="yandex_storeModel.Products" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="yandex_storeModel.sysdiagrams" Width="1.5" PointX="11.875" PointY="5" IsExpanded="true" />
+        <AssociationConnector Association="yandex_storeModel.FK__Order_Pro__order__02084FDA" ManuallyRouted="false" />
+        <AssociationConnector Association="yandex_storeModel.FK__Order_Pro__produ__02FC7413" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

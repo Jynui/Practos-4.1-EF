@@ -1,0 +1,52 @@
+﻿<Window x:Class="Practos_4._11.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practos_4._11"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox x:Name="Txt" Grid.Column="0" />
+            <Button Grid.Column="1" Content="Поиск" x:Name="SearchButton" Click="SearchButton_Click"/>
+
+
+        </Grid>
+        <Grid Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <ComboBox x:Name = "FF" Grid.Column="0" SelectionChanged="FF_SelectionChanged"/>
+            <Button Grid.Column="1" Content="Очистить" x:Name="ClearButton" Click="ClearButton_Click"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <DataGrid x:Name="holo1" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Айди Заказа продукта" Binding="{Binding Products.Order_Products}"/>
+                    <DataGridTextColumn Header="Название продукта" Binding="{Binding Products.product_name}"/>
+                    <DataGridTextColumn Header="Цена" Binding="{Binding Products.price}"/>
+                    <DataGridTextColumn Header="Запас количество" Binding="{Binding Products.stock_quantity}"/>
+                    <DataGridTextColumn Header="Дата заказа" Binding="{Binding Orders.order_date}"/>
+                    <DataGridTextColumn Header="Общая сумма" Binding="{Binding Orders.total_amount}"/>
+                </DataGrid.Columns>
+
+            </DataGrid>
+
+        </Grid>
+    </Grid>
+</Window>
